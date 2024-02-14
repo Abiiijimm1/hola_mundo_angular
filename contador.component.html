@@ -1,0 +1,16 @@
+<div>
+
+    <h1>{{title}}</h1>
+    <h3>{{subtitulo}}</h3>
+    <h5>{{contador}}</h5>
+    <section *ngIf="contador >=18; else menorEdad">
+        <h6>Mayor de Edad</h6>
+    </section>
+    <ng-template #menorEdad>
+        <h6>Menor de edad, aun no puedes tomar cerveza</h6>
+    </ng-template>
+<!--INTERPOLACION: UTILIZAR UN ATRIBUTO O METODO DE HTML -->
+    <button style="width: 40px;" (click)="incrementar()" class="btn btn-primary ">+</button>
+    <button style="width: 40px;" (click)="decrementar()" class="btn btn-danger ms-2">-</button>
+
+</div>
